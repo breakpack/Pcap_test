@@ -102,7 +102,6 @@ int main(int argc, char* argv[]) {
     char filter_exp[] = "tcp";
 	pcap_t* pcap = pcap_open_live(argv[1], BUFSIZ, 1, 1000, errbuf);
     
-
     //오류처리 - 잡힌 패킷 없음
 	if (pcap == NULL) {
 		fprintf(stderr, "pcap_open_live(%s) return null - %s\n", param.dev_, errbuf);
